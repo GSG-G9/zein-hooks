@@ -35,7 +35,10 @@ const ToDo = () => {
           <p>{task.description}</p>
           <button
             onClick={() => {
-              toDo.filter((to) => to.id !== task.id);
+              setToDo({
+                ...toDo,
+                toDo: toDo.filter((to) => to.id !== task.id)
+              })
             }}
           >
             delete
